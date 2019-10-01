@@ -1,0 +1,2 @@
+ zenity --error "meine guete" --text="upstream changed , please merge before commit"
+ 
