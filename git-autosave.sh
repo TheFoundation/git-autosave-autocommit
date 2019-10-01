@@ -9,7 +9,7 @@ while (true);do
   sleep 10;
   sum_cur=$(md5sum *|md5sum) ;
   if [ "$sum" == "$sum_cur" ] ; then 
-      echo "nothing changed@"$(date -u);
+      echo -ne "\rnothing changed@"$(date -u);
   else
       git_commitpush ; sum="$sum_cur";
   fi;
