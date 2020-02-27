@@ -11,6 +11,6 @@ while (true);do
   if [ "$sum" == "$sum_cur" ] ; then 
       echo -ne "\rnothing changed@"$(date -u);
   else
-      git_commitpush ; sum="$sum_cur";
+      git_commitpush|sed 's/^/|/g' |tr -d '\n' ; sum="$sum_cur";
   fi;
   done
